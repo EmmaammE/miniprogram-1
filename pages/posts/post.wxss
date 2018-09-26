@@ -1,0 +1,8 @@
+@import "post-article/post-article-template.wxss";
+
+.swiper {
+    width: 100%;
+    height: 440rpx;
+    /* height: 440rpx; */
+}
+

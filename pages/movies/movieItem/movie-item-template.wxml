@@ -1,0 +1,9 @@
+<import src="/pages/movies/stars/star-template.wxml" />
+
+<template name="movieItemTemplate">
+    <view class="movie-item">
+        <image class="movie-image" src="{{img}}" />
+        <text class="movie-title">{{title}}</text>
+        <template is="starTemplate" data="{{rating:rating,stars:stars}}"></template>
+    </view>
+</template>

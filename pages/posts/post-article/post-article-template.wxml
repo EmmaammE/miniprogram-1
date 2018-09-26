@@ -1,0 +1,20 @@
+<template name="post-article">
+    <view class="article-container">
+        <view class="author-container">
+            <image class="post-author" src="{{authorAvatar}}"></image>
+            <text class="post-date">{{date}}</text>
+        </view>
+
+        <view class="horizontal" />
+
+        <image src="{{articleImage}}" />
+        <text>{{articleTitle}}</text>
+        <text>{{articleDetail}}</text>
+        <view class="article-like">
+            <image class="like-icon" bindtap="onStarClick" src="/images/icon/star.png" />
+            <text class="like-text">{{articleLike}}</text>
+            <image class="like-icon" src="/images/icon/share.png" />
+            <text class="like-text">{{articleShare}}</text>
+        </view>
+    </view>
+</template>

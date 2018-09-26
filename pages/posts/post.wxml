@@ -1,0 +1,25 @@
+<import src="./post-article/post-article-template" />
+
+<view>
+    <swiper indicator-dots="true" autoplay="true">
+        <swiper-item>
+            <image src="/images/1.png" class="slide-image" />
+        </swiper-item>
+
+        <swiper-item>
+            <image src="/images/2.png" class="slide-image" />
+        </swiper-item>
+
+        <swiper-item>
+            <image src="/images/3.png" class="slide-image" />
+        </swiper-item>
+    </swiper>
+
+      <image style="width:50rpx;height:50rpx" src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}" bindtap="toPlayMusic" />
+
+      <image style="width:50rpx;height:50rpx" src="/images/icon/arrow-right.png" bindtap="navigate" />
+
+    <!-- <view bindtap="onClick"> -->
+         <template is="post-article" data="{{...postItem}}"></template>
+    <!-- </view> -->
+</view>

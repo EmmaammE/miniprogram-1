@@ -1,0 +1,26 @@
+.article-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.article-like {
+    flex-direction: row;
+    /* width: 50rpx;
+    height: 50rpx;
+    line-height: 50rpx; */
+
+}
+
+.like-icon {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+}
+
+.like-text {
+    font-size: 20rpx;
+}
