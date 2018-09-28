@@ -1,9 +1,37 @@
 @import '/pages/movies/movie-list/movie-list-template.wxss';
+@import '/pages/movies/movie-grid-template/movie-grid-template.wxss';
 
+.search {
+    background-color: #f2f2f2;
+    height: 80rpx;
+    display: flex;
+    width: 90%;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px;
+}
+.search-icon {
+    margin-left: 20rpx;
+}
+.search input {
+    height: 100%;
+    width: 600rpx;
+    margin-left: 10px;
+    font-size: 28rpx;
+}
+.placeholder {
+    font-size: 14px;
+    color: #d1d1d1;
+}
 .container {
     background: #f2f2f2;
 }
 
 .movie-template {
     margin-bottom: 40rpx;
+}
+
+.search-pannel {
+    position: absolute;
+    top: 80rpx;
 }

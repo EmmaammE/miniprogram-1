@@ -1,0 +1,16 @@
+<!--pages/movies/movie-detail/movie-detail.wxml-->
+<view class="item-container">
+    <image class="img-header" src="{{movieItem.movieImg}}"  mode="aspectFill"/>
+
+    <view class="img-header-hover">
+        <text class="main-title">{{movieItem.title}}</text>
+        <text class="sub-title">{{movieItem.country + '·' + movieItem.year}}</text>
+
+        <view class="like">
+            <text class="">{{movieItem.wishCount}}</text>
+            <text class="plain-text">人喜欢</text>
+            <text>{{movieItem.commentCount}}</text>
+            <text class="plain-text">条评论</text>
+        </view>
+    </view>
+</view>

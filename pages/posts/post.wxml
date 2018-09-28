@@ -15,6 +15,8 @@
         </swiper-item>
     </swiper>
 
+    <text bindtap="onTestAddress">按钮</text>
+
       <image style="width:50rpx;height:50rpx" src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}" bindtap="toPlayMusic" />
 
       <image style="width:50rpx;height:50rpx" src="/images/icon/arrow-right.png" bindtap="navigate" />

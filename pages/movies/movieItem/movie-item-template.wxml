@@ -1,7 +1,8 @@
 <import src="/pages/movies/stars/star-template.wxml" />
 
 <template name="movieItemTemplate">
-    <view class="movie-item">
+    <!-- data-XX-OX, 这里的XX所有字母都会转换成小写,后续的首字母会被转换成大写 -->
+    <view class="movie-item" catchtap="onItemClick" data-item-id="{{movieId}}">
         <image class="movie-image" src="{{img}}" />
         <text class="movie-title">{{title}}</text>
         <template is="starTemplate" data="{{rating:rating,stars:stars}}"></template>

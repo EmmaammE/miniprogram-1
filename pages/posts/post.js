@@ -74,5 +74,13 @@ Page({
         }
     },
 
-    onStarClick: postArticleEvent.onStarClick
+    onStarClick: postArticleEvent.onStarClick,
+
+    onTestAddress:function () {
+      wx.chooseAddress({
+        success:function (res){
+          console.log(',,,,')
+        }
+      })
+    }
 })

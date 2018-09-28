@@ -1,7 +1,7 @@
 var util = require("../../utils/starConvert");
-
+var movieItemUtil = require("./movieItem/movie-item");
 var appInst = getApp();
-const debug = true;
+const debug = false;
 
 /***
  * 如何抽象数据请求和处理的过程；
@@ -16,7 +16,10 @@ Page({
     data:{
         inTheaters:{},
         top250:{},
-        comingSoon:{}
+        comingSoon:{},
+        search:{},
+        showSearch:false,
+        showContainer:true
     },
     onLoad: function (event) {
         var inTheatersUrl = appInst.globalData.g__doubanBase + "/v2/movie/in_theaters" + "?start=0&count=3";
@@ -68,5 +71,43 @@ Page({
             subTitle:subTitle
         };
         this.setData(temp);
+    },
+    /**
+     * 传递目标参数：定义数据变量，作为页面参数
+     */
+    onMoretap:function (event) {
+        var catagory = event.currentTarget.dataset.catagory;
+        debug && console.log(catagory);
+        wx.navigateTo({
+            url:'more-movie/more-movie?catagory='+catagory
+        })
+    },
+
+    onBindFocus:function () {
+        debug && console.log('onFocus');
+        this.setData({
+            showSearch:true,
+            showContainer:false
+        })
+    },
+
+    onBindConfirm:function (event) {
+        debug && console.log(event.detail);
+        var text = event.detail.value;
+        var searchUrl = appInst.globalData.g__doubanBase + "/v2/movie/search?q=" + text;
+        this.getMovies(searchUrl,"search","");
+    },
+
+    onCancelTap:function () {
+        this.setData({
+            showContainer:true,
+            showSearch:false,
+            search:{}
+        })
+    },
+
+    onItemClick:function (event) {
+        movieItemUtil.onItemClick(event);
     }
+
 })
